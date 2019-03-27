@@ -159,12 +159,12 @@ public class OrdersController {
         return amount;
     }
 
-    // @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE)
-    // public class PaymentDeclinedException extends IllegalStateException {
-    //     public PaymentDeclinedException(String s) {
-    //         super(s);
-    //     }
-    // }
+    @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE)
+    public class PaymentDeclinedException extends IllegalStateException {
+        public PaymentDeclinedException(String s) {
+            super(s);
+        }
+    }
 
     @ResponseStatus(value = HttpStatus.NOT_ACCEPTABLE)
     public class InvalidOrderException extends IllegalStateException {
