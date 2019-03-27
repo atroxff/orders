@@ -93,7 +93,7 @@ public class OrdersController {
                 throw new PaymentDeclinedException("Unable to parse authorisation packet");
             }
             if (!paymentResponse.isAuthorised()) {
-                throw new PaymentDeclinedException(paymentResponse.getMessage());
+                throw new PaymentDeclinedException(paymentResponse.getMessage()+" test exception");
             }
 
             // Ship
