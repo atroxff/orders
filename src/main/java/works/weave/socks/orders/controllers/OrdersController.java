@@ -92,9 +92,9 @@ public class OrdersController {
             if (paymentResponse == null) {
                 throw new PaymentDeclinedException("Unable to parse authorisation packet");
             }
-            if (!paymentResponse.isAuthorised()) {
-                throw new PaymentDeclinedException(paymentResponse.getMessage()+" test exception");
-            }
+            // if (!paymentResponse.isAuthorised()) {
+            //     throw new PaymentDeclinedException(paymentResponse.getMessage()+" test exception");
+            // }
 
             // Ship
             String customerId = parseId(customerFuture.get(timeout, TimeUnit.SECONDS).getId().getHref());
